@@ -8,12 +8,13 @@
 <p align="center"\>  
 <strong\>Transform your natural language into executable shell commands, right in your terminal. Never forget a command again.</strong\>  
 </p\>  
-<p align="center"\>  
-
+<p align="center">  
 <video src="https://github.com/user-attachments/assets/f5aa4b31-a5c5-4632-ab3c-41c7ec028349" />
+</p>
 
+<p align="center">
 <video src="https://github.com/user-attachments/assets/7b8e6978-38b6-4ff4-9f58-820eff31c327" />
-
+</p>
 
 
 ## **🤔 What is CommandLineGenius?**
