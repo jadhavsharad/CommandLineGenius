@@ -12,6 +12,10 @@
 
 <video src="https://github.com/user-attachments/assets/f5aa4b31-a5c5-4632-ab3c-41c7ec028349" />
 
+<video src="https://github.com/user-attachments/assets/7b8e6978-38b6-4ff4-9f58-820eff31c327" />
+
+
+
 ## **🤔 What is CommandLineGenius?**
 
 **CommandLineGenius** is a native macOS command-line tool that bridges the gap between human intent and machine instruction. Instead of struggling to remember the exact syntax for ```find```, ```grep```, ```awk```, or ```git``` commands, you simply describe what you want to do in plain English. The assistant uses a powerful, locally-run AI to generate the precise command and places it directly into your terminal prompt, ready for you to execute.
