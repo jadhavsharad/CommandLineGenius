@@ -1,10 +1,12 @@
 # **🧠 CommandLineGenius**
 
-<p align="center"\>  
-<img alt="Swift Version" src="https://img.shields.io/badge/Swift-5.7%2B-orange"/\>  
-<img alt="Platform" src="https://img.shields.io/badge/Platform-macOS-lightgrey"/\>  
-<img alt="Contributions Welcome" src="https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg"/\>  
-</p\>  
+<p align="center">
+  <img alt="Swift Version" src="https://img.shields.io/badge/Swift-5.7%2B-orange"/>
+  <img alt="Platform" src="https://img.shields.io/badge/Platform-macOS-lightgrey"/>
+  <img alt="Contributions Welcome" src="https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg"/>
+  <img alt="Repo Views" src="https://komarev.com/ghpvc/?username=jadhavsharad&repo=CommandLineGenius&color=blue&style=flat&label=Views"/>
+</p>
+
 <p align="center"\>  
 <strong\>Transform your natural language into executable shell commands, right in your terminal. Never forget a command again.</strong\>  
 </p\>  
