@@ -7,22 +7,56 @@
 
 import Foundation
 
-
 	// === GET USER'S COMMANDS
-let arguments = CommandLine.arguments
+var arguments = CommandLine.arguments
 
-	// === ENSURE AT LEAST ONE ARGUMENT IS PROVIDED, OTHERWISE SHOW USAGE AND EXIT
-guard arguments.count > 1 else {
-	fputs("Usage: AI \"your natural language command\"\n", stderr)
-	exit(1) }
+	// === REMOVE FIRST ARGUMENT (EXECUTABLE NAME)
+arguments.removeFirst()
+
+	// === SET DEFAULT COMMAND MODE
+var mode: CommandMode = .general
+
+	// === CHECK IF FIRST ARGUMENT IS A FLAG AND SET MODE ACCORDINGLY
+if let flag = arguments.first, flag.starts(with: "--") {
+	switch flag{
+		case "--git":
+			mode = .git
+		case "--docker":
+			mode = .docker
+		case "--homebrew":
+			mode = .homebrew
+		case "--react":
+			mode = .react
+		case "--swift":
+			mode = .swift
+		case "--node":
+			mode = .node
+		case "--python":
+			mode = .python
+		case "--system":
+			mode = .system
+		default:
+				// === HANDLE UNKNOWN FLAG ERROR
+			fputs("Error: \(flag) Unknown Flag.\n", stderr)
+			exit(1)
+	}
+		// === REMOVE FLAG ARGUMENT AFTER PROCESSING
+	arguments.removeFirst()
+}
+
+	// === ENSURE USER PROVIDED A QUERY, OTHERWISE SHOW USAGE
+guard !arguments.isEmpty else {
+	fputs("Usage: AI [--argument] 'Your natural language query' \n", stderr)
+	exit(1)
+}
 
 	// === COMBINE ALL USER INPUT ARGUMENTS INTO A SINGLE STRING
-let userInput = arguments.dropFirst().joined(separator: " ")
+let userInput = arguments.joined(separator: " ")
 
 	// === INITIALIZE THE OLLAMA SERVICE
 let service = OllamaService()
 	// === CALL THE SERVICE TO GENERATE A COMMAND FROM USER INPUT
-let result = await service.generateCommand(for: userInput)
+let result = await service.generateCommand(for: userInput, mode: mode)
 
 	// === HANDLE THE RESULT OF THE COMMAND GENERATION
 switch result {
