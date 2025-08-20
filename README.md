@@ -33,7 +33,18 @@ This project is built on the principle of **local-first AI**, ensuring your data
 * **100% Local & Private:** Powered by Ollama and codellama, all AI processing happens on your machine. No data ever leaves your computer.  
 * **Blazingly Fast:** Built in native Swift for optimal performance on macOS.
 
-### **Integrate with Your Shell**
+### **Setting Up**
+- Install Homebrew
+- Brew Install Ollama
+- Pull Codellama 7b or 13b using Ollama
+- Download the tool here =>  [Download](https://github.com/jadhavsharad/CommandLineGenius/releases/download/v1.0/CommandLineGenius) 
+- Copy the Provided Tool Into Below Folder
+ ```
+  ~/usr/local/bin/
+  ```
+- Integrate with shell
+- Start Using CommandLineGenius
+### **Integrating with Your Shell**
 
 To enable the AI command, you need to add a small function to your shell's configuration file.
 
@@ -61,7 +72,7 @@ To enable the AI command, you need to add a small function to your shell's confi
    ```bash
    AI() {
      local cmd
-     cmd=$(aicompleter "$@")
+     cmd=$(CommandLineGenius "$@")
      if [[ -n "$cmd" ]]; then
        READLINE_LINE="$cmd"
        READLINE_POINT=${#cmd}
